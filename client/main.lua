@@ -73,6 +73,9 @@ end)
 RegisterNetEvent('brazzers-hotspot:client:connectToHotspot', function(data)
     connected = true
     TriggerEvent('qb-phone:client:CustomNotification', 'HOT SPOT', 'You have connected to the '..data.network..' hotspot', 'fas fa-wifi', '#1DA1F2', 5000)
+    if data.network == 'private' then
+        inBennys = true
+    end
 end)
 
 -- Threads
