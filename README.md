@@ -36,4 +36,5 @@ Locate the readme folder and copy and paste the entire css and js file. Open the
 ## Dependencies
 1. qbcore
 2. renewed-phone
+3. polyzone
 
