@@ -23,3 +23,16 @@ server_scripts {
 shared_scripts {
 	'shared/*.lua',
 }
+
+escrow_ignore {
+    'client/*.lua',
+    'server/*.lua',
+	'shared/*.lua',
+    'readme/client/*.lua',
+    'readme/server/*.lua',
+    'readme/*.lua',
+    'readme/html/*.html',
+    'readme/html/css/hotspot.css',
+    'readme/html/js/app.js',
+    'readme/html/js/hotspot.js',
+}
