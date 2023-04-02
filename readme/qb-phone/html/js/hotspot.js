@@ -5,6 +5,8 @@ var amount = ''
 
 function loadMilkroad(){
     $(".hotspot-overview").html("");
+    $(".hotspot-lists").html("");
+
     $.post('https://qb-phone/isConnected', JSON.stringify({}), function(connected){
         if (!connected){
             $(".hotspot-overview").html('<p class="noaccess">No Access<i class="fas fa-frown" id="noaccess-frown"></i></p>');
@@ -13,12 +15,9 @@ function loadMilkroad(){
 
         $.post('https://qb-phone/distCheck', JSON.stringify({}), function(isNear){
             if (!isNear){
-                $(".hotspot-lists").html("");
                 $(".hotspot-overview").html('<p class="noaccess">No Access<i class="fas fa-frown" id="noaccess-frown"></i></p>');
                 return;
             }
-
-            $(".hotspot-lists").html("");
 
             $.post('https://qb-phone/getMilkItems', JSON.stringify({}), function(items){
                 $.each(items, function(i, v){
