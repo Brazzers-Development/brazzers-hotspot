@@ -23,11 +23,3 @@ server_scripts {
 shared_scripts {
 	'shared/*.lua',
 }
-
-files {
-	'html/*.html',
-	'html/script.js',
-	'html/style.css',
-}
-
-ui_page 'html/index.html'
